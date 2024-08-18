@@ -1,7 +1,14 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, UseGuards } from '@nestjs/common';
+import { AuthGuard } from 'src/guards/auth.guard';
 import { ListsService } from './lists.service';
 
-@Controller()
+@Controller('lists')
+@UseGuards(AuthGuard)
 export class ListsController {
   constructor(private readonly listsService: ListsService) {}
+
+  @Get()
+  async getAll() {
+    return 'all lists';
+  }
 }
