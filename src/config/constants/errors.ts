@@ -7,6 +7,7 @@ export const USER = {
   NOT_FOUND: 'Пользователь не найден',
   NOT_FOUND_IN_REQUEST: 'Пользователь не найден в запросе',
   BAD_PASSWORD: 'Неверный пароль',
+  FORBIDDEN: 'Недостаточно прав',
 };
 
 export const TOKEN = {

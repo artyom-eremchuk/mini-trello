@@ -14,7 +14,7 @@ export class User {
   @Column({ type: 'varchar', length: 100, select: false })
   password: string;
 
-  @OneToMany(() => List, (list) => list.author)
+  @OneToMany(() => List, (list) => list.creator)
   lists: List[];
 
   @OneToMany(() => Card, (card) => card.author)
